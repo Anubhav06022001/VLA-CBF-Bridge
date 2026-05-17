@@ -1,0 +1,73 @@
+
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+
+
+# Large datasets
+data/vocbf/*.pkl
+data/vocbf/*.csv
+
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# build / packaging
+build/
+dist/
+*.egg-info/
+
+# environments
+.env
+.venv
+venv/
+
+# =========================
+# Data / models
+# =========================
+data/
+*.pkl
+*.npz
+*.npy
+*.pt
+
+# =========================
+# Experiment outputs
+# =========================
+outputs/
+logs/
+results/
+figures/
+
+# videos / plots
+*.mp4
+*.png
+
+# =========================
+# Mujoco
+# =========================
+*.mjb
+MUJOCO_LOG.TXT
+
+# =========================
+# Experiment tracking
+# =========================
+wandb/
+
+# =========================
+# Archive experiments
+# =========================
+archive/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
