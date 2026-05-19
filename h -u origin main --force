@@ -1,0 +1,241 @@
+[33mcommit 07dfa32d66374c470161a4b72217c46d2e757f30[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Anubhav06022001 <anubhav96022@gmail.com>
+Date:   Sun May 17 14:11:58 2026 +0530
+
+    VLA_VOCBF
+
+ .gitignore |  73 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m
+ README.md  | 114 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m---------------------[m
+ 2 files changed, 155 insertions(+), 32 deletions(-)
+
+[33mcommit 1474dcf5c0d9401f22c10537459466e92f38579d[m
+Author: Anubhav06022001 <anubhav96022@gmail.com>
+Date:   Sun May 17 13:51:06 2026 +0530
+
+    vla_vocbf
+
+ MUJOCO_LOG.TXT                                             |     36 [32m+[m
+ README.md                                                  |     91 [32m+[m
+ archive/README.md                                          |     98 [32m+[m
+ archive/assets/franka_emika_panda/LICENSE                  |    176 [32m+[m
+ archive/assets/franka_emika_panda/README.md                |     45 [32m+[m
+ archive/assets/franka_emika_panda/assets/finger_0.obj      |   2488 [32m+[m
+ archive/assets/franka_emika_panda/assets/finger_1.obj      |   1836 [32m+[m
+ archive/assets/franka_emika_panda/assets/hand.stl          |    Bin [31m0[m -> [32m10084[m bytes
+ archive/assets/franka_emika_panda/assets/hand_0.obj        |    264 [32m+[m
+ archive/assets/franka_emika_panda/assets/hand_1.obj        |   3360 [32m+[m
+ archive/assets/franka_emika_panda/assets/hand_2.obj        |  16110 [32m++++[m
+ archive/assets/franka_emika_panda/assets/hand_3.obj        |  24634 [32m++++++[m
+ archive/assets/franka_emika_panda/assets/hand_4.obj        |   4236 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0.stl         |    Bin [31m0[m -> [32m10084[m bytes
+ archive/assets/franka_emika_panda/assets/link0_0.obj       |   8190 [32m++[m
+ archive/assets/franka_emika_panda/assets/link0_1.obj       |   2920 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0_10.obj      |   9355 [32m++[m
+ archive/assets/franka_emika_panda/assets/link0_11.obj      |    646 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0_2.obj       |  16052 [32m++++[m
+ archive/assets/franka_emika_panda/assets/link0_3.obj       |   1318 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0_4.obj       |   5810 [32m++[m
+ archive/assets/franka_emika_panda/assets/link0_5.obj       |    485 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0_7.obj       |    870 [32m+[m
+ archive/assets/franka_emika_panda/assets/link0_8.obj       |  87991 [32m++++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link0_9.obj       |   2906 [32m+[m
+ archive/assets/franka_emika_panda/assets/link1.obj         |  87030 [32m++++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link1.stl         |    Bin [31m0[m -> [32m15084[m bytes
+ archive/assets/franka_emika_panda/assets/link2.obj         |  88234 [32m++++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link2.stl         |    Bin [31m0[m -> [32m15084[m bytes
+ archive/assets/franka_emika_panda/assets/link3.stl         |    Bin [31m0[m -> [32m15084[m bytes
+ archive/assets/franka_emika_panda/assets/link3_0.obj       |  82307 [32m+++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link3_1.obj       |   1815 [32m+[m
+ archive/assets/franka_emika_panda/assets/link3_2.obj       |   2326 [32m+[m
+ archive/assets/franka_emika_panda/assets/link3_3.obj       |  12647 [32m+++[m
+ archive/assets/franka_emika_panda/assets/link4.stl         |    Bin [31m0[m -> [32m15084[m bytes
+ archive/assets/franka_emika_panda/assets/link4_0.obj       |   2333 [32m+[m
+ archive/assets/franka_emika_panda/assets/link4_1.obj       |  84697 [32m++++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link4_2.obj       |  12552 [32m+++[m
+ archive/assets/franka_emika_panda/assets/link4_3.obj       |   1857 [32m+[m
+ archive/assets/franka_emika_panda/assets/link5_0.obj       |  22637 [32m+++++[m
+ archive/assets/franka_emika_panda/assets/link5_1.obj       |   1748 [32m+[m
+ archive/assets/franka_emika_panda/assets/link5_2.obj       | 103226 [32m++++++++++++++++++++++[m
+ .../assets/franka_emika_panda/assets/link5_collision_0.obj |    188 [32m+[m
+ .../assets/franka_emika_panda/assets/link5_collision_1.obj |    119 [32m+[m
+ .../assets/franka_emika_panda/assets/link5_collision_2.obj |    188 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6.stl         |    Bin [31m0[m -> [32m10084[m bytes
+ archive/assets/franka_emika_panda/assets/link6_0.obj       |   4346 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_1.obj       |    773 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_10.obj      |  10302 [32m+++[m
+ archive/assets/franka_emika_panda/assets/link6_11.obj      |    940 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_12.obj      |    114 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_13.obj      |    114 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_14.obj      |  12286 [32m+++[m
+ archive/assets/franka_emika_panda/assets/link6_15.obj      |  18632 [32m++++[m
+ archive/assets/franka_emika_panda/assets/link6_16.obj      |  99159 [32m+++++++++++++++++++++[m
+ archive/assets/franka_emika_panda/assets/link6_2.obj       |    289 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_3.obj       |    345 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_4.obj       |    401 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_5.obj       |    345 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_6.obj       |    366 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_7.obj       |    128 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_8.obj       |    268 [32m+[m
+ archive/assets/franka_emika_panda/assets/link6_9.obj       |    502 [32m+[m
+ archive/assets/franka_emika_panda/assets/link7.stl         |    Bin [31m0[m -> [32m10084[m bytes
+ archive/assets/franka_emika_panda/assets/link7_0.obj       |  37458 [32m++++++++[m
+ archive/assets/franka_emika_panda/assets/link7_1.obj       |   3427 [32m+[m
+ archive/assets/franka_emika_panda/assets/link7_2.obj       |   5706 [32m++[m
+ archive/assets/franka_emika_panda/assets/link7_3.obj       |   3411 [32m+[m
+ archive/assets/franka_emika_panda/assets/link7_4.obj       |   2375 [32m+[m
+ archive/assets/franka_emika_panda/assets/link7_5.obj       |   6340 [32m++[m
+ archive/assets/franka_emika_panda/assets/link7_6.obj       |   2823 [32m+[m
+ archive/assets/franka_emika_panda/assets/link7_7.obj       |  21858 [32m+++++[m
+ archive/assets/franka_emika_panda/assets/panda.xml         |    349 [32m+[m
+ archive/assets/franka_emika_panda/franka_panda.py          |    283 [32m+[m
+ archive/assets/franka_emika_panda/hand.xml                 |    114 [32m+[m
+ archive/assets/franka_emika_panda/panda.png                |    Bin [31m0[m -> [32m2192427[m bytes
+ archive/assets/franka_emika_panda/panda.xml                |    349 [32m+[m
+ archive/assets/franka_emika_panda/panda_nohand.xml         |    217 [32m+[m
+ archive/assets/franka_emika_panda/scene.xml                |     35 [32m+[m
+ archive/assets/franka_emika_panda/scene2.xml               |     50 [32m+[m
+ archive/assets/franka_emika_panda/secene1.xml              |     40 [32m+[m
+ archive/controllers/__init__.py                            |      0
+ archive/controllers/osc.py                                 |      0
+ archive/controllers/pd_joint.py                            |      4 [32m+[m
+ archive/env/__init__.py                                    |      0
+ archive/env/__pycache__/__init__.cpython-310.pyc           |    Bin [31m0[m -> [32m143[m bytes
+ archive/env/__pycache__/camera.cpython-310.pyc             |    Bin [31m0[m -> [32m697[m bytes
+ archive/env/franka_env.py                                  |      8 [32m+[m
+ archive/kinematics/__pycache__/diff_ik.cpython-310.pyc     |    Bin [31m0[m -> [32m1482[m bytes
+ archive/scripts/run_stage0_joint_goal.py                   |    160 [32m+[m
+ archive/scripts/run_stage1_object_select.py                |    218 [32m+[m
+ archive/scripts/run_stage2_reach.py                        |    349 [32m+[m
+ archive/scripts/run_stage2a_reach.py                       |    363 [32m+[m
+ archive/src/config/__pycache__/franka.cpython-310.pyc      |    Bin [31m0[m -> [32m732[m bytes
+ archive/src/config/franka.py                               |     52 [32m+[m
+ .../src/utils/__pycache__/mouse_keyboard.cpython-310.pyc   |    Bin [31m0[m -> [32m2220[m bytes
+ archive/src/utils/__pycache__/mujoco_ids.cpython-310.pyc   |    Bin [31m0[m -> [32m1627[m bytes
+ archive/src/utils/mouse_keyboard.py                        |     86 [32m+[m
+ archive/src/utils/mujoco_ids.py                            |     88 [32m+[m
+ archive/training/train_clip.py                             |      0
+ archive/training/train_toy.py                              |      2 [32m+[m
+ archive/vla/__pycache__/base.cpython-310.pyc               |    Bin [31m0[m -> [32m613[m bytes
+ archive/vla/__pycache__/clip_vla.cpython-310.pyc           |    Bin [31m0[m -> [32m1814[m bytes
+ archive/vla/__pycache__/toy_vla.cpython-310.pyc            |    Bin [31m0[m -> [32m780[m bytes
+ archive/vla/base.py                                        |     11 [32m+[m
+ archive/vla/clip_vla.py                                    |     44 [32m+[m
+ archive/vla/toy_vla.py                                     |     15 [32m+[m
+ assets/franka_emika_panda/LICENSE                          |    176 [32m+[m
+ assets/franka_emika_panda/README.md                        |     45 [32m+[m
+ assets/franka_emika_panda/assets/finger_0.obj              |   2488 [32m+[m
+ assets/franka_emika_panda/assets/finger_1.obj              |   1836 [32m+[m
+ assets/franka_emika_panda/assets/hand.stl                  |    Bin [31m0[m -> [32m10084[m bytes
+ assets/franka_emika_panda/assets/hand_0.obj                |    264 [32m+[m
+ assets/franka_emika_panda/assets/hand_1.obj                |   3360 [32m+[m
+ assets/franka_emika_panda/assets/hand_2.obj                |  16110 [32m++++[m
+ assets/franka_emika_panda/assets/hand_3.obj                |  24634 [32m++++++[m
+ assets/franka_emika_panda/assets/hand_4.obj                |   4236 [32m+[m
+ assets/franka_emika_panda/assets/link0.stl                 |    Bin [31m0[m -> [32m10084[m bytes
+ assets/franka_emika_panda/assets/link0_0.obj               |   8190 [32m++[m
+ assets/franka_emika_panda/assets/link0_1.obj               |   2920 [32m+[m
+ assets/franka_emika_panda/assets/link0_10.obj              |   9355 [32m++[m
+ assets/franka_emika_panda/assets/link0_11.obj              |    646 [32m+[m
+ assets/franka_emika_panda/assets/link0_2.obj               |  16052 [32m++++[m
+ assets/franka_emika_panda/assets/link0_3.obj               |   1318 [32m+[m
+ assets/franka_emika_panda/assets/link0_4.obj               |   5810 [32m++[m
+ assets/franka_emika_panda/assets/link0_5.obj               |    485 [32m+[m
+ assets/franka_emika_panda/assets/link0_7.obj               |    870 [32m+[m
+ assets/franka_emika_panda/assets/link0_8.obj               |  87991 [32m++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link0_9.obj               |   2906 [32m+[m
+ assets/franka_emika_panda/assets/link1.obj                 |  87030 [32m++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link1.stl                 |    Bin [31m0[m -> [32m15084[m bytes
+ assets/franka_emika_panda/assets/link2.obj                 |  88234 [32m++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link2.stl                 |    Bin [31m0[m -> [32m15084[m bytes
+ assets/franka_emika_panda/assets/link3.stl                 |    Bin [31m0[m -> [32m15084[m bytes
+ assets/franka_emika_panda/assets/link3_0.obj               |  82307 [32m+++++++++++++++++[m
+ assets/franka_emika_panda/assets/link3_1.obj               |   1815 [32m+[m
+ assets/franka_emika_panda/assets/link3_2.obj               |   2326 [32m+[m
+ assets/franka_emika_panda/assets/link3_3.obj               |  12647 [32m+++[m
+ assets/franka_emika_panda/assets/link4.stl                 |    Bin [31m0[m -> [32m15084[m bytes
+ assets/franka_emika_panda/assets/link4_0.obj               |   2333 [32m+[m
+ assets/franka_emika_panda/assets/link4_1.obj               |  84697 [32m++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link4_2.obj               |  12552 [32m+++[m
+ assets/franka_emika_panda/assets/link4_3.obj               |   1857 [32m+[m
+ assets/franka_emika_panda/assets/link5_0.obj               |  22637 [32m+++++[m
+ assets/franka_emika_panda/assets/link5_1.obj               |   1748 [32m+[m
+ assets/franka_emika_panda/assets/link5_2.obj               | 103226 [32m++++++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link5_collision_0.obj     |    188 [32m+[m
+ assets/franka_emika_panda/assets/link5_collision_1.obj     |    119 [32m+[m
+ assets/franka_emika_panda/assets/link5_collision_2.obj     |    188 [32m+[m
+ assets/franka_emika_panda/assets/link6.stl                 |    Bin [31m0[m -> [32m10084[m bytes
+ assets/franka_emika_panda/assets/link6_0.obj               |   4346 [32m+[m
+ assets/franka_emika_panda/assets/link6_1.obj               |    773 [32m+[m
+ assets/franka_emika_panda/assets/link6_10.obj              |  10302 [32m+++[m
+ assets/franka_emika_panda/assets/link6_11.obj              |    940 [32m+[m
+ assets/franka_emika_panda/assets/link6_12.obj              |    114 [32m+[m
+ assets/franka_emika_panda/assets/link6_13.obj              |    114 [32m+[m
+ assets/franka_emika_panda/assets/link6_14.obj              |  12286 [32m+++[m
+ assets/franka_emika_panda/assets/link6_15.obj              |  18632 [32m++++[m
+ assets/franka_emika_panda/assets/link6_16.obj              |  99159 [32m+++++++++++++++++++++[m
+ assets/franka_emika_panda/assets/link6_2.obj               |    289 [32m+[m
+ assets/franka_emika_panda/assets/link6_3.obj               |    345 [32m+[m
+ assets/franka_emika_panda/assets/link6_4.obj               |    401 [32m+[m
+ assets/franka_emika_panda/assets/link6_5.obj               |    345 [32m+[m
+ assets/franka_emika_panda/assets/link6_6.obj               |    366 [32m+[m
+ assets/franka_emika_panda/assets/link6_7.obj               |    128 [32m+[m
+ assets/franka_emika_panda/assets/link6_8.obj               |    268 [32m+[m
+ assets/franka_emika_panda/assets/link6_9.obj               |    502 [32m+[m
+ assets/franka_emika_panda/assets/link7.stl                 |    Bin [31m0[m -> [32m10084[m bytes
+ assets/franka_emika_panda/assets/link7_0.obj               |  37458 [32m++++++++[m
+ assets/franka_emika_panda/assets/link7_1.obj               |   3427 [32m+[m
+ assets/franka_emika_panda/assets/link7_2.obj               |   5706 [32m++[m
+ assets/franka_emika_panda/assets/link7_3.obj               |   3411 [32m+[m
+ assets/franka_emika_panda/assets/link7_4.obj               |   2375 [32m+[m
+ assets/franka_emika_panda/assets/link7_5.obj               |   6340 [32m++[m
+ assets/franka_emika_panda/assets/link7_6.obj               |   2823 [32m+[m
+ assets/franka_emika_panda/assets/link7_7.obj               |  21858 [32m+++++[m
+ assets/franka_emika_panda/franka_panda.py                  |    284 [32m+[m
+ assets/franka_emika_panda/hand.xml                         |    114 [32m+[m
+ assets/franka_emika_panda/panda.png                        |    Bin [31m0[m -> [32m2192427[m bytes
+ assets/franka_emika_panda/panda.xml                        |    349 [32m+[m
+ assets/franka_emika_panda/panda_nohand.xml                 |    217 [32m+[m
+ assets/franka_emika_panda/scene.xml                        |     45 [32m+[m
+ assets/franka_emika_panda/scene2.xml                       |     75 [32m+[m
+ assets/franka_emika_panda/scene_cylinder.xml               |     39 [32m+[m
+ assets/franka_emika_panda/scene_no_obstacle.xml            |     28 [32m+[m
+ env/__init__.py                                            |      0
+ env/__pycache__/__init__.cpython-310.pyc                   |    Bin [31m0[m -> [32m143[m bytes
+ env/__pycache__/camera.cpython-310.pyc                     |    Bin [31m0[m -> [32m697[m bytes
+ env/camera.py                                              |     32 [32m+[m
+ env/franka_env.py                                          |      8 [32m+[m
+ experiments/data_collection/README.md                      |     12 [32m+[m
+ experiments/data_collection/collect_data_vocbf.py          |     89 [32m+[m
+ experiments/data_collection/compute_normalisation.py       |     54 [32m+[m
+ experiments/data_collection/vocbf_init.py                  |     55 [32m+[m
+ experiments/test.py                                        |    213 [32m+[m
+ experiments/test_vla.py                                    |    166 [32m+[m
+ kinematics/__pycache__/diff_ik.cpython-310.pyc             |    Bin [31m0[m -> [32m1482[m bytes
+ kinematics/diff_ik.py                                      |     43 [32m+[m
+ models/dyn_u_mean.npy                                      |    Bin [31m0[m -> [32m184[m bytes
+ models/dyn_u_std.npy                                       |    Bin [31m0[m -> [32m184[m bytes
+ models/dyn_x_mean.npy                                      |    Bin [31m0[m -> [32m240[m bytes
+ models/dyn_x_std.npy                                       |    Bin [31m0[m -> [32m240[m bytes
+ models/vocbf.pt                                            |    Bin [31m0[m -> [32m76989[m bytes
+ models/vocbf2.pt                                           |    Bin [31m0[m -> [32m77001[m bytes
+ policies/__pycache__/pi0_policy.cpython-310.pyc            |    Bin [31m0[m -> [32m637[m bytes
+ policies/vla_policy.py                                     |     36 [32m+[m
+ policies/vla_state.py                                      |     11 [32m+[m
+ policies/vla_thread.py                                     |     37 [32m+[m
+ requirements.txt                                           |      1 [32m+[m
+ setup.py                                                   |      8 [32m+[m
+ src/config/__pycache__/franka.cpython-310.pyc              |    Bin [31m0[m -> [32m732[m bytes
+ src/config/franka.py                                       |     52 [32m+[m
+ src/utils/__pycache__/mouse_keyboard.cpython-310.pyc       |    Bin [31m0[m -> [32m2220[m bytes
+ src/utils/__pycache__/mujoco_ids.cpython-310.pyc           |    Bin [31m0[m -> [32m1627[m bytes
+ src/utils/mouse_keyboard.py                                |     86 [32m+[m
+ src/utils/mujoco_ids.py                                    |     88 [32m+[m
+ src/vocbf/README.md                                        |     51 [32m+[m
+ src/vocbf/__pycache__/barrier_net.cpython-310.pyc          |    Bin [31m0[m -> [32m1262[m bytes
+ src/vocbf/barrier_net.py                                   |     34 [32m+[m
+ src/vocbf/train_vocbf.py                                   |    123 [32m+[m
+ vla_franka.egg-info/PKG-INFO                               |      3 [32m+[m
+ vla_franka.egg-info/SOURCES.txt                            |     12 [32m+[m
+ vla_franka.egg-info/dependency_links.txt                   |      1 [32m+[m
+ vla_franka.egg-info/top_level.txt                          |      2 [32m+[m
+ 224 files changed, 1858038 insertions(+)

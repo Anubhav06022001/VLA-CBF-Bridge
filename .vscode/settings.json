@@ -1,0 +1,12 @@
+{
+    "python.defaultInterpreterPath": "/home/anubhav/miniconda3/envs/mujoco/bin/python",
+    "python.analysis.extraPaths": [
+        "/home/anubhav/Documents/vla_cbf_bridge",
+        "/home/anubhav/Documents/vla_cbf_bridge/src"
+    ],
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none",
+        "reportMissingModuleSource": "none"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "venvPath": "/home/anubhav/miniconda3/envs",
+    "venv": "mujoco",
+    "reportMissingImports": "none",
+    "reportMissingModuleSource": "none"
+}
